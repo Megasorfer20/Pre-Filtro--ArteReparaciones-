@@ -1,0 +1,294 @@
+[{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd2"
+  },
+  "TipoEquipo": "Laptop",
+  "Especificaciones": {
+    "Procesador": "Intel Core i5",
+    "Memoria": "Disco SSD 250 GB",
+    "RAM": "16GB DDR4",
+    "Tarjeta Gráfica": "NVIDIA GeForce GTX 1650"
+  },
+  "Problema": {
+    "Procesador": "Sobrecalentamiento",
+    "Memoria": "Falla en el disco SSD"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-15T00:00:00.000Z"
+  },
+  "FechaDevolucion": {
+    "$date": "2023-09-25T00:00:00.000Z"
+  },
+  "ValorPagar": 150,
+  "Reparado": true,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc6"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88d9e"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd3"
+  },
+  "TipoEquipo": "Impresora",
+  "Especificaciones": {
+    "Tipo": "Láser",
+    "Resolución de impresión": "1200 x 1200 dpi",
+    "Conexión": "USB",
+    "Páginas por minuto": "20 ppm"
+  },
+  "Problema": {
+    "Tipo": "No imprime",
+    "Resolución de impresión": "Baja calidad de impresión"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-10T00:00:00.000Z"
+  },
+  "FechaDevolucion": null,
+  "ValorPagar": null,
+  "Reparado": false,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc8"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da0"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd4"
+  },
+  "TipoEquipo": "Celular",
+  "Especificaciones": {
+    "Marca": "Samsung",
+    "Modelo": "Galaxy S21",
+    "Sistema Operativo": "Android 11",
+    "Almacenamiento": "128GB",
+    "RAM": "8GB"
+  },
+  "Problema": {
+    "Marca": "No enciende",
+    "Almacenamiento": "Lento"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-12T00:00:00.000Z"
+  },
+  "FechaDevolucion": null,
+  "ValorPagar": null,
+  "Reparado": false,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dca"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da1"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd5"
+  },
+  "TipoEquipo": "Laptop",
+  "Especificaciones": {
+    "Procesador": "AMD Ryzen 7",
+    "Memoria": "Disco HDD 1TB",
+    "RAM": "12GB DDR4",
+    "Tarjeta Gráfica": "AMD Radeon RX 5600M"
+  },
+  "Problema": {
+    "Procesador": "Rendimiento lento",
+    "Tarjeta Gráfica": "No funciona"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-14T00:00:00.000Z"
+  },
+  "FechaDevolucion": {
+    "$date": "2023-09-24T00:00:00.000Z"
+  },
+  "ValorPagar": 200,
+  "Reparado": true,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcd"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da2"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd6"
+  },
+  "TipoEquipo": "Tablet",
+  "Especificaciones": {
+    "Marca": "Apple",
+    "Modelo": "iPad Air",
+    "Sistema Operativo": "iPadOS 15",
+    "Almacenamiento": "256GB",
+    "RAM": "8GB"
+  },
+  "Problema": {
+    "Modelo": "Pantalla rota",
+    "Almacenamiento": "Agotado"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-16T00:00:00.000Z"
+  },
+  "FechaDevolucion": {
+    "$date": "2023-09-26T00:00:00.000Z"
+  },
+  "ValorPagar": 100,
+  "Reparado": true,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc6"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da3"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd7"
+  },
+  "TipoEquipo": "Impresora",
+  "Especificaciones": {
+    "Tipo": "Inyección de tinta",
+    "Resolución de impresión": "4800 x 1200 dpi",
+    "Conexión": "Wi-Fi",
+    "Páginas por minuto": "15 ppm"
+  },
+  "Problema": {
+    "Tipo": "Atasco de papel",
+    "Resolución de impresión": "Baja calidad de impresión"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-18T00:00:00.000Z"
+  },
+  "FechaDevolucion": null,
+  "ValorPagar": null,
+  "Reparado": false,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcb"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da4"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd8"
+  },
+  "TipoEquipo": "Smartphone",
+  "Especificaciones": {
+    "Marca": "Google",
+    "Modelo": "Pixel 5",
+    "Sistema Operativo": "Android 12",
+    "Almacenamiento": "128GB",
+    "RAM": "8GB"
+  },
+  "Problema": {
+    "Marca": "No enciende",
+    "RAM": "Baja velocidad"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-19T00:00:00.000Z"
+  },
+  "FechaDevolucion": null,
+  "ValorPagar": null,
+  "Reparado": false,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc8"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da5"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dd9"
+  },
+  "TipoEquipo": "Laptop",
+  "Especificaciones": {
+    "Procesador": "Intel Core i7",
+    "Memoria": "Disco SSD 512 GB",
+    "RAM": "32GB DDR4",
+    "Tarjeta Gráfica": "NVIDIA GeForce RTX 3080"
+  },
+  "Problema": {
+    "Procesador": "Sobrecalentamiento",
+    "Tarjeta Gráfica": "No funciona"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-20T00:00:00.000Z"
+  },
+  "FechaDevolucion": {
+    "$date": "2023-09-30T00:00:00.000Z"
+  },
+  "ValorPagar": 250,
+  "Reparado": true,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dca"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da6"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88dda"
+  },
+  "TipoEquipo": "Tablet",
+  "Especificaciones": {
+    "Marca": "Samsung",
+    "Modelo": "Galaxy Tab S7",
+    "Sistema Operativo": "Android 11",
+    "Almacenamiento": "256GB",
+    "RAM": "8GB"
+  },
+  "Problema": {
+    "Modelo": "No enciende",
+    "Sistema Operativo": "Lento"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-22T00:00:00.000Z"
+  },
+  "FechaDevolucion": {
+    "$date": "2023-10-02T00:00:00.000Z"
+  },
+  "ValorPagar": 120,
+  "Reparado": true,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcd"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da7"
+  }
+},
+{
+  "_id": {
+    "$oid": "651323c12db18b9c02c88ddb"
+  },
+  "TipoEquipo": "Impresora",
+  "Especificaciones": {
+    "Tipo": "Láser",
+    "Resolución de impresión": "1200 x 1200 dpi",
+    "Conexión": "USB",
+    "Páginas por minuto": "20 ppm"
+  },
+  "Problema": {
+    "Tipo": "No imprime",
+    "Resolución de impresión": "Baja calidad de impresión"
+  },
+  "FechaIngreso": {
+    "$date": "2023-09-24T00:00:00.000Z"
+  },
+  "FechaDevolucion": null,
+  "ValorPagar": null,
+  "Reparado": false,
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcb"
+  },
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da8"
+  }
+}]

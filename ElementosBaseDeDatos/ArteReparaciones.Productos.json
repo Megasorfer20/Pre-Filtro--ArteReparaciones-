@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261092"
+  },
+  "Producto": "Laptop",
+  "Sede": "Sede A",
+  "Stock": 2,
+  "Precio": 1210,
+  "Compra": {
+    "$oid": "651387879c1e962f2b261085"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261093"
+  },
+  "Producto": "Tablet",
+  "Sede": "Sede A",
+  "Stock": 1,
+  "Precio": 410,
+  "Compra": {
+    "$oid": "651387879c1e962f2b261086"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261094"
+  },
+  "Producto": "Impresora",
+  "Sede": "Sede B",
+  "Stock": 3,
+  "Precio": 160,
+  "Compra": {
+    "$oid": "651387879c1e962f2b261086"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261095"
+  },
+  "Producto": "Disco Duro",
+  "Sede": "Sede C",
+  "Stock": 4,
+  "Precio": 90,
+  "Compra": {
+    "$oid": "651387879c1e962f2b261087"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261096"
+  },
+  "Producto": "Webcam",
+  "Sede": "Sede D",
+  "Stock": 5,
+  "Precio": 50,
+  "Compra": {
+    "$oid": "651387879c1e962f2b261088"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261097"
+  },
+  "Producto": "Monitor",
+  "Sede": "Sede A",
+  "Stock": 2,
+  "Precio": 310,
+  "Compra": {
+    "$oid": "651387879c1e962f2b261089"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261098"
+  },
+  "Producto": "Smartphone",
+  "Sede": "Sede C",
+  "Stock": 4,
+  "Precio": 170,
+  "Compra": {
+    "$oid": "651387879c1e962f2b26108a"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b261099"
+  },
+  "Producto": "Tablet",
+  "Sede": "Sede D",
+  "Stock": 3,
+  "Precio": 415,
+  "Compra": {
+    "$oid": "651387879c1e962f2b26108a"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b26109a"
+  },
+  "Producto": "Monitor",
+  "Sede": "Sede A",
+  "Stock": 4,
+  "Precio": 310,
+  "Compra": {
+    "$oid": "651387879c1e962f2b26108b"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b26109b"
+  },
+  "Producto": "Webcam",
+  "Sede": "Sede B",
+  "Stock": 3,
+  "Precio": 50,
+  "Compra": {
+    "$oid": "651387879c1e962f2b26108c"
+  }
+},
+{
+  "_id": {
+    "$oid": "6513920e9c1e962f2b26109c"
+  },
+  "Producto": "Impresora",
+  "Sede": "Sede C",
+  "Stock": 5,
+  "Precio": 160,
+  "Compra": {
+    "$oid": "651387879c1e962f2b26108d"
+  }
+}]

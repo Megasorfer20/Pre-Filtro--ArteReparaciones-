@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "65130d082db18b9c02c88d8d"
+  },
+  "NombreSede": "Sede A",
+  "Direccion": "Calle 123, Bogotá",
+  "Telefono": {
+    "$numberLong": "3123456789"
+  },
+  "CantidadEmpleados": 8
+},
+{
+  "_id": {
+    "$oid": "65130d082db18b9c02c88d8e"
+  },
+  "NombreSede": "Sede B",
+  "Direccion": "Carrera 456, Medellín",
+  "Telefono": {
+    "$numberLong": "3212345678"
+  },
+  "CantidadEmpleados": 5
+},
+{
+  "_id": {
+    "$oid": "65130d082db18b9c02c88d8f"
+  },
+  "NombreSede": "Sede C",
+  "Direccion": "Avenida 789, Cali",
+  "Telefono": {
+    "$numberLong": "3112345678"
+  },
+  "CantidadEmpleados": 10
+},
+{
+  "_id": {
+    "$oid": "65130d082db18b9c02c88d90"
+  },
+  "NombreSede": "Sede D",
+  "Direccion": "Calle 567, Barranquilla",
+  "Telefono": {
+    "$numberLong": "3223456789"
+  },
+  "CantidadEmpleados": 7
+},
+{
+  "_id": {
+    "$oid": "65130d082db18b9c02c88d91"
+  },
+  "NombreSede": "Sede E",
+  "Direccion": "Carrera 890, Cartagena",
+  "Telefono": {
+    "$numberLong": "3001234567"
+  },
+  "CantidadEmpleados": 3
+}]

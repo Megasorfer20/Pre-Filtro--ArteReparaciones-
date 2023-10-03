@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "651310042db18b9c02c88d94"
+  },
+  "Nombre": "Juan Pérez",
+  "Empresa": "ABC S.A.",
+  "Direccion": "Calle 123, Bogotá",
+  "Telefono": {
+    "$numberLong": "3123456789"
+  },
+  "Email": "juan.perez@abc.com"
+},
+{
+  "_id": {
+    "$oid": "651310042db18b9c02c88d95"
+  },
+  "Nombre": "María Gómez",
+  "Empresa": "XYZ Ltda.",
+  "Direccion": "Carrera 456, Medellín",
+  "Telefono": {
+    "$numberLong": "3212345678"
+  },
+  "Email": "maria.gomez@xyz.com"
+},
+{
+  "_id": {
+    "$oid": "651310042db18b9c02c88d96"
+  },
+  "Nombre": "Carlos Rodríguez",
+  "Empresa": "DEF C.A.",
+  "Direccion": "Avenida 789, Cali",
+  "Telefono": {
+    "$numberLong": "3112345678"
+  },
+  "Email": "carlos.rodriguez@def.com"
+},
+{
+  "_id": {
+    "$oid": "651310042db18b9c02c88d97"
+  },
+  "Nombre": "Ana López",
+  "Empresa": "GHI S.A.S.",
+  "Direccion": "Calle 567, Barranquilla",
+  "Telefono": {
+    "$numberLong": "3223456789"
+  },
+  "Email": "ana.lopez@ghi.com"
+},
+{
+  "_id": {
+    "$oid": "651310042db18b9c02c88d98"
+  },
+  "Nombre": "Luisa Martínez",
+  "Empresa": "JKL Ltda.",
+  "Direccion": "Carrera 890, Cartagena",
+  "Telefono": {
+    "$numberLong": "3001234567"
+  },
+  "Email": "luisa.martinez@jkl.com"
+}]

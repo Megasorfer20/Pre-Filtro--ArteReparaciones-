@@ -1,0 +1,176 @@
+[{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dc6"
+  },
+  "Nombre": "Juan",
+  "Apellido": "Gómez",
+  "DNI": 1234567890,
+  "Telefono": {
+    "$numberLong": "3156789012"
+  },
+  "Direccion": "Calle 1, Bogotá",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d8e"
+  },
+  "Cargo": "Gerente"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dc7"
+  },
+  "Nombre": "María",
+  "Apellido": "López",
+  "DNI": {
+    "$numberLong": "2345678901"
+  },
+  "Telefono": {
+    "$numberLong": "3145678901"
+  },
+  "Direccion": "Carrera 2, Medellín",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d8f"
+  },
+  "Cargo": "Vendedor"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dc8"
+  },
+  "Nombre": "Carlos",
+  "Apellido": "Martínez",
+  "DNI": {
+    "$numberLong": "3456789012"
+  },
+  "Telefono": {
+    "$numberLong": "3165678902"
+  },
+  "Direccion": "Avenida 3, Cali",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d8d"
+  },
+  "Cargo": "Técnico"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dc9"
+  },
+  "Nombre": "Ana",
+  "Apellido": "Rodríguez",
+  "DNI": {
+    "$numberLong": "4567890123"
+  },
+  "Telefono": {
+    "$numberLong": "3175678903"
+  },
+  "Direccion": "Calle 4, Barranquilla",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d90"
+  },
+  "Cargo": "Asistente"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dca"
+  },
+  "Nombre": "Luis",
+  "Apellido": "Hernández",
+  "DNI": {
+    "$numberLong": "5678901234"
+  },
+  "Telefono": {
+    "$numberLong": "3185678904"
+  },
+  "Direccion": "Carrera 5, Cartagena",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d91"
+  },
+  "Cargo": "Gerente"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dcb"
+  },
+  "Nombre": "Pedro",
+  "Apellido": "Sánchez",
+  "DNI": {
+    "$numberLong": "6789012345"
+  },
+  "Telefono": {
+    "$numberLong": "3195678905"
+  },
+  "Direccion": "Calle 6, Bogotá",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d8d"
+  },
+  "Cargo": "Vendedor"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dcc"
+  },
+  "Nombre": "Laura",
+  "Apellido": "Díaz",
+  "DNI": {
+    "$numberLong": "7890123456"
+  },
+  "Telefono": {
+    "$numberLong": "3105678906"
+  },
+  "Direccion": "Carrera 7, Medellín",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d8e"
+  },
+  "Cargo": "Técnico"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dcd"
+  },
+  "Nombre": "Manuel",
+  "Apellido": "Pérez",
+  "DNI": {
+    "$numberLong": "8901234567"
+  },
+  "Telefono": {
+    "$numberLong": "3115678907"
+  },
+  "Direccion": "Avenida 8, Cali",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d8f"
+  },
+  "Cargo": "Asistente"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dce"
+  },
+  "Nombre": "Carmen",
+  "Apellido": "García",
+  "DNI": {
+    "$numberLong": "9012345678"
+  },
+  "Telefono": {
+    "$numberLong": "3125678908"
+  },
+  "Direccion": "Calle 9, Barranquilla",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d90"
+  },
+  "Cargo": "Gerente"
+},
+{
+  "_id": {
+    "$oid": "65131f862db18b9c02c88dcf"
+  },
+  "Nombre": "Fernando",
+  "Apellido": "Fernández",
+  "DNI": 1123456789,
+  "Telefono": {
+    "$numberLong": "3135678909"
+  },
+  "Direccion": "Avenida 10, Cartagena",
+  "Sede": {
+    "$oid": "65130d082db18b9c02c88d91"
+  },
+  "Cargo": "Vendedor"
+}]

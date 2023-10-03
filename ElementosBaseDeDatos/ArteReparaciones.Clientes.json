@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88d9e"
+  },
+  "Nombre": "Juan",
+  "Apellido": "Pérez",
+  "Direccion": "Calle 123, Bogotá",
+  "Telefono": {
+    "$numberLong": "3123456789"
+  },
+  "Email": "juan.perez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88d9f"
+  },
+  "Nombre": "María",
+  "Apellido": "Gómez",
+  "Direccion": "Carrera 456, Medellín",
+  "Telefono": {
+    "$numberLong": "3212345678"
+  },
+  "Email": "maria.gomez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da0"
+  },
+  "Nombre": "Carlos",
+  "Apellido": "Rodríguez",
+  "Direccion": "Avenida 789, Cali",
+  "Telefono": {
+    "$numberLong": "3112345678"
+  },
+  "Email": "carlos.rodriguez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da1"
+  },
+  "Nombre": "Ana",
+  "Apellido": "López",
+  "Direccion": "Calle 567, Barranquilla",
+  "Telefono": {
+    "$numberLong": "3223456789"
+  },
+  "Email": "ana.lopez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da2"
+  },
+  "Nombre": "Luisa",
+  "Apellido": "Martínez",
+  "Direccion": "Carrera 890, Cartagena",
+  "Telefono": {
+    "$numberLong": "3001234567"
+  },
+  "Email": "luisa.martinez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da3"
+  },
+  "Nombre": "Pedro",
+  "Apellido": "Sánchez",
+  "Direccion": "Calle 101, Bogotá",
+  "Telefono": {
+    "$numberLong": "3109876543"
+  },
+  "Email": "pedro.sanchez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da4"
+  },
+  "Nombre": "Laura",
+  "Apellido": "Hernández",
+  "Direccion": "Carrera 222, Medellín",
+  "Telefono": {
+    "$numberLong": "3208765432"
+  },
+  "Email": "laura.hernandez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da5"
+  },
+  "Nombre": "Manuel",
+  "Apellido": "García",
+  "Direccion": "Avenida 333, Cali",
+  "Telefono": {
+    "$numberLong": "3137654321"
+  },
+  "Email": "manuel.garcia@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da6"
+  },
+  "Nombre": "Carmen",
+  "Apellido": "Pérez",
+  "Direccion": "Calle 444, Barranquilla",
+  "Telefono": {
+    "$numberLong": "3246543210"
+  },
+  "Email": "carmen.perez@example.com"
+},
+{
+  "_id": {
+    "$oid": "651310c32db18b9c02c88da7"
+  },
+  "Nombre": "Fernando",
+  "Apellido": "Díaz",
+  "Direccion": "Carrera 555, Cartagena",
+  "Telefono": {
+    "$numberLong": "3054321098"
+  },
+  "Email": "fernando.diaz@example.com"
+}]

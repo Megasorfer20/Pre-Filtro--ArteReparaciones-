@@ -1,0 +1,266 @@
+[{
+  "_id": {
+    "$oid": "651387879c1e962f2b261085"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-24T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d94"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dba"
+      },
+      "Cantidad": 2
+    },
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dbb"
+      },
+      "Cantidad": 1
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc6"
+  },
+  "FechaEntrega": {
+    "$date": "2023-09-30T00:00:00.000Z"
+  },
+  "TotalPagar": 1700
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b261086"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-22T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d95"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dbe"
+      },
+      "Cantidad": 3
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc8"
+  },
+  "FechaEntrega": {
+    "$date": "2023-10-05T00:00:00.000Z"
+  },
+  "TotalPagar": 450
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b261087"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-20T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d96"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dc0"
+      },
+      "Cantidad": 4
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dca"
+  },
+  "FechaEntrega": {
+    "$date": "2023-10-10T00:00:00.000Z"
+  },
+  "TotalPagar": 160
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b261088"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-16T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d97"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dc2"
+      },
+      "Cantidad": 5
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcd"
+  },
+  "FechaEntrega": {
+    "$date": "2023-10-20T00:00:00.000Z"
+  },
+  "TotalPagar": 250
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b261089"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-24T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d94"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dbd"
+      },
+      "Cantidad": 2
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dca"
+  },
+  "FechaEntrega": {
+    "$date": "2023-10-03T00:00:00.000Z"
+  },
+  "TotalPagar": 600
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b26108a"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-12T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d98"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dbf"
+      },
+      "Cantidad": 1
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc6"
+  },
+  "FechaEntrega": {
+    "$date": "2023-10-15T00:00:00.000Z"
+  },
+  "TotalPagar": 50
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b26108b"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-15T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d98"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dbd"
+      },
+      "Cantidad": 4
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcd"
+  },
+  "FechaEntrega": {
+    "$date": "2023-09-30T00:00:00.000Z"
+  },
+  "TotalPagar": 600
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b26108c"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-14T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d96"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dbf"
+      },
+      "Cantidad": 3
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc8"
+  },
+  "FechaEntrega": {
+    "$date": "2023-09-29T00:00:00.000Z"
+  },
+  "TotalPagar": 450
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b26108d"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-18T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d97"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dc2"
+      },
+      "Cantidad": 2
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcb"
+  },
+  "FechaEntrega": {
+    "$date": "2023-09-27T00:00:00.000Z"
+  },
+  "TotalPagar": 80
+},
+{
+  "_id": {
+    "$oid": "651387879c1e962f2b26108e"
+  },
+  "FechaCompra": {
+    "$date": "2023-09-10T00:00:00.000Z"
+  },
+  "Proveedor": {
+    "$oid": "651310042db18b9c02c88d95"
+  },
+  "Elementos": [
+    {
+      "ProductoComprado": {
+        "$oid": "65131c962db18b9c02c88dbb"
+      },
+      "Cantidad": 5
+    }
+  ],
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc8"
+  },
+  "FechaEntrega": {
+    "$date": "2023-09-25T00:00:00.000Z"
+  },
+  "TotalPagar": 2000
+}]
