@@ -1,0 +1,210 @@
+[{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610a8"
+  },
+  "FechaVenta": "2023-09-30",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc6"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dba",
+      "Cantidad": 3
+    },
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbb",
+      "Cantidad": 2
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88d9e"
+  },
+  "TotalPagar": 3850
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610a9"
+  },
+  "FechaVenta": "2023-09-28",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc7"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbf",
+      "Cantidad": 1
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da1"
+  },
+  "TotalPagar": 150
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610aa"
+  },
+  "FechaVenta": "2023-09-27",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc8"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dc0",
+      "Cantidad": 4
+    },
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dc2",
+      "Cantidad": 2
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da2"
+  },
+  "TotalPagar": 620
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610ab"
+  },
+  "FechaVenta": "2023-09-26",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc9"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dba",
+      "Cantidad": 5
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da3"
+  },
+  "TotalPagar": 6000
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610ac"
+  },
+  "FechaVenta": "2023-09-25",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dca"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbd",
+      "Cantidad": 1
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da4"
+  },
+  "TotalPagar": 150
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610ad"
+  },
+  "FechaVenta": "2023-09-24",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcb"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbf",
+      "Cantidad": 3
+    },
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dc3",
+      "Cantidad": 2
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da5"
+  },
+  "TotalPagar": 510
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610ae"
+  },
+  "FechaVenta": "2023-09-23",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcc"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbd",
+      "Cantidad": 2
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da6"
+  },
+  "TotalPagar": 300
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610af"
+  },
+  "FechaVenta": "2023-09-22",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dcd"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbb",
+      "Cantidad": 4
+    },
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbf",
+      "Cantidad": 1
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da7"
+  },
+  "TotalPagar": 640
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610b0"
+  },
+  "FechaVenta": "2023-09-21",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc6"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dc2",
+      "Cantidad": 2
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da8"
+  },
+  "TotalPagar": 100
+},
+{
+  "_id": {
+    "$oid": "651399599c1e962f2b2610b1"
+  },
+  "FechaVenta": "2023-09-20",
+  "Empleado": {
+    "$oid": "65131f862db18b9c02c88dc7"
+  },
+  "Elementos": [
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dbf",
+      "Cantidad": 1
+    },
+    {
+      "ProductoVendido": "65131c962db18b9c02c88dc0",
+      "Cantidad": 3
+    }
+  ],
+  "Cliente": {
+    "$oid": "651310c32db18b9c02c88da9"
+  },
+  "TotalPagar": 1020
+}]
