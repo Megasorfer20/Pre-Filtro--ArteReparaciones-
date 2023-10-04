@@ -5,7 +5,6 @@ const getSede = async (req,res) => {
         const sedesDB = (await conection()).Sedes
         const sedes = await sedesDB.find({}).toArray();
         res.json(sedes)
-        client.close();
     } catch (error) {
         console.log(error);
         throw new Error(`No se puede conectar a la coleccion`)
