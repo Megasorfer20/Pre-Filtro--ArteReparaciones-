@@ -1,4 +1,4 @@
-[readme.md](https://github.com/Megasorfer20/Pre-Filtro--ArteReparaciones-/files/12796084/readme.md)# Proyecto Pre-Filtro "ArteReparaciones"
+# [Proyecto Pre-Filtro "ArteReparaciones"](https://github.com/Megasorfer20/Pre-Filtro--ArteReparaciones-/files/12796084/readme.md)
 
 El proyecto consiste en una páginade gestion de inventarios y transacciones de una compañia de reparaciones de electrodomesticos, y tambíen de venta de estos mismos
 
