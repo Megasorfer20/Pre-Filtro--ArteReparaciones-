@@ -10,7 +10,16 @@ Estructura Inicial de la base de datos (Puede tener ligeros cambios durante el p
 
 Maquetación del frontend básico de la página en modo SPA
 
+**Diapositivas Completas**
+
 https://www.figma.com/file/2xDPMoCoqIEbaIpzshljYS/Untitled?type=design&node-id=1%3A6&mode=design&t=K8O4rIS3d3AxlzES-1
+
+_Secciones de Muestra de información_
+
+![image](https://github.com/Megasorfer20/Pre-Filtro--ArteReparaciones-/assets/123566003/a8f32fc8-8f0d-44f1-b518-8b3b00270d72)
+![image](https://github.com/Megasorfer20/Pre-Filtro--ArteReparaciones-/assets/123566003/cfd3419f-1a60-4768-a99b-ca035fa88adc)
+
+_Formularios_
 
 
 ## Planeacion
@@ -27,10 +36,7 @@ Es el modelo principal e inicial de la base de datos, los datos pueden variar a 
 
 ### NodeJs
 
-Es todo el Backend relacionado a la creacion de las APIsing readme.md…]()
-
-
-Figma de Maquetacion del Frontend para la 
+Es todo el Backend relacionado a la creacion de las APIs (Proximamente maquetado con Swagger los endpoints)
 
 ## Organizacion de las carpetas
 
