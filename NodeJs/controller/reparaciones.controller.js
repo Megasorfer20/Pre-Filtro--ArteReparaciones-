@@ -31,6 +31,25 @@ const getOneReparacion = async (req, res) => {
     }
 };
 
+const getEspecificacionesReparacion = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const idReparacion = new ObjectId(id);
+        const reparecionesDB = (await conection()).Reparaciones;
+        const repareciones = await reparecionesDB.collection([
+            {$match:{"$_id" : idReparacion}},
+            {$unwind: "Especificaciones"},
+        ])
+            .toArray();
+        res.json(repareciones);
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+const getProblemasReparacion = async (req, res) => {};
+
 const updateReparacion = async (req, res) => {};
 
 const deleteeReparacion = async (req, res) => {};
@@ -41,4 +60,6 @@ export {
     getOneReparacion,
     updateReparacion,
     deleteeReparacion,
+    getEspecificacionesReparacion,
+    getProblemasReparacion
 };

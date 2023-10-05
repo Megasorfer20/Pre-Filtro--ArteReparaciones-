@@ -1,7 +1,6 @@
 import "./App.css";
 import HeaderMain from "./components/Header/Header";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import { Button } from "semantic-ui-react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Sedes from "./components/Sedes/Sedes";
 import Productos from "./components/Productos/Productos";
 import Proveedores from "./components/Proveedores/Proveedores";

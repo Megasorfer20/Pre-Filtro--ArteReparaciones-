@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { Button, Header } from "semantic-ui-react";
@@ -6,6 +6,9 @@ import { Button, Header } from "semantic-ui-react";
 export default function HeaderMain() {
     return (
         <Header>
+            <Link to="/">
+                <Button>Inicio</Button>
+            </Link>
             <Link to="/compras">
                 <Button>Compras</Button>
             </Link>
