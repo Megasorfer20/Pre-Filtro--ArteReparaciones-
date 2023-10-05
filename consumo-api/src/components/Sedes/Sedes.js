@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 import { Table, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./Sedes.css";
-import ListadoEmpleados from "./ListadoEmpleados";
+import ListadoSedes from "./ListadoSedes";
 
-export default function Sedes() {
+
+export default function Sedes({}) {
     const [sedesApiData, setSedesApiData] = useState([]);
 
-    const [isActive, setIsActive] = useState(false);
+
 
     useEffect(() => {
         axios.get("http://localhost:5000/sedes").then((response) => {
@@ -28,41 +29,13 @@ export default function Sedes() {
 
     return (
         <React.Fragment>
-            <h1>React Accordion Demo</h1>
+            <h1>Informacion de Sedes</h1>
+            <Link to="/sedes/add">
+            <Button>Nueva Sede</Button>
+            </Link>
             {sedesApiData.map((element) => {
                 return (
-                    <div className="accordion">
-                        <div className="accordion-item">
-                            <div
-                                className="accordion-title"
-                                onClick={() => setIsActive(!isActive)}
-                            >
-                                <div>
-                                    <h3>{element.NombreSede}</h3>
-                                    <p>
-                                        <strong>Direccion: </strong>
-                                        {element.Direccion}
-                                    </p>
-                                    <p>
-                                        <strong>Telefono: </strong>+57{" "}
-                                        {element.Telefono}
-                                    </p>
-                                    <Button>Actualizar</Button>
-                                    <Button>Eliminar</Button>
-                                </div>
-                                <div>{isActive ? "-" : "+"}</div>
-                            </div>
-                            {isActive && (
-                                <div className="accordion-content">
-                                    <ul>
-                                        <ListadoEmpleados
-                                            idSede={element._id}
-                                        />
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                    <ListadoSedes key={element._id} data={element}/>
                 );
             })}
         </React.Fragment>
