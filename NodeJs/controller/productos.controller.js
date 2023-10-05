@@ -1,23 +1,43 @@
 import { client, conection } from "../conection/conection.js";
 
-const getProducto = async (req,res) => {
+const getProducto = async (req, res) => {
     try {
-        const productosDB = (await conection()).Productos
+        const productosDB = (await conection()).Productos;
         const productos = await productosDB.find({}).toArray();
-        res.json(productos)
+        res.json(productos);
         client.close();
     } catch (error) {
         console.log(error);
-        throw new Error(`No se puede conectar a la coleccion`)
     }
 };
 
-const postProducto = () => {};
+const postProducto = async (req, res) => {};
 
-const getOneProducto = () => {};
+const getOneProducto = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const objectIdProducto = new ObjectId(id);
+        const productosDB = (await conection()).Productos;
+        const productos = await productosDB
+            .find({
+                _id: objectIdProducto,
+            })
+            .toArray();
+        res.json(productos);
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
-const updateProducto = () => {};
+const updateProducto = async (req, res) => {};
 
-const deleteeProducto = () => {};
+const deleteeProducto = async (req, res) => {};
 
-export { getProducto, postProducto, getOneProducto, updateProducto, deleteeProducto };
+export {
+    getProducto,
+    postProducto,
+    getOneProducto,
+    updateProducto,
+    deleteeProducto,
+};

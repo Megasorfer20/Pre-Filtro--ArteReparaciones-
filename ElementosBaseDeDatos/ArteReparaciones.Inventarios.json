@@ -1,110 +1,72 @@
-[{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dba"
-  },
-  "Producto": "Laptop",
-  "Precio": 1200,
-  "Stock": 50,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88daa"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dbb"
-  },
-  "Producto": "Tablet",
-  "Precio": 400,
-  "Stock": 30,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88dab"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dbc"
-  },
-  "Producto": "Smartphone",
-  "Precio": 700,
-  "Stock": 60,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88dac"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dbd"
-  },
-  "Producto": "Monitor",
-  "Precio": 300,
-  "Stock": 25,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88dad"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dbe"
-  },
-  "Producto": "Impresora",
-  "Precio": 150,
-  "Stock": 40,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88dae"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dbf"
-  },
-  "Producto": "Teclado",
-  "Precio": 30,
-  "Stock": 100,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88daf"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dc0"
-  },
-  "Producto": "Mouse",
-  "Precio": 15,
-  "Stock": 80,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88db0"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dc1"
-  },
-  "Producto": "Disco Duro",
-  "Precio": 80,
-  "Stock": 35,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88db1"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dc2"
-  },
-  "Producto": "Auriculares",
-  "Precio": 50,
-  "Stock": 70,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88db2"
-  }
-},
-{
-  "_id": {
-    "$oid": "65131c962db18b9c02c88dc3"
-  },
-  "Producto": "Webcam",
-  "Precio": 40,
-  "Stock": 45,
-  "Proveedor": {
-    "$oid": "651317ac2db18b9c02c88db3"
-  }
-}]
+[
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dba" },
+        "Producto": "Laptop",
+        "Precio": 1200,
+        "Stock": 50,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d94" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dbb" },
+        "Producto": "Tablet",
+        "Precio": 400,
+        "Stock": 30,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d95" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dbc" },
+        "Producto": "Smartphone",
+        "Precio": 700,
+        "Stock": 60,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d96" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dbd" },
+        "Producto": "Monitor",
+        "Precio": 300,
+        "Stock": 25,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d97" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dbe" },
+        "Producto": "Impresora",
+        "Precio": 150,
+        "Stock": 40,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d98" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dbf" },
+        "Producto": "Teclado",
+        "Precio": 30,
+        "Stock": 100,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d94" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dc0" },
+        "Producto": "Mouse",
+        "Precio": 15,
+        "Stock": 80,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d95" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dc1" },
+        "Producto": "Disco Duro",
+        "Precio": 80,
+        "Stock": 35,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d96" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dc2" },
+        "Producto": "Auriculares",
+        "Precio": 50,
+        "Stock": 70,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d97" }
+    },
+    {
+        "_id": { "$oid": "65131c962db18b9c02c88dc3" },
+        "Producto": "Webcam",
+        "Precio": 40,
+        "Stock": 45,
+        "Proveedor": { "$oid": "651310042db18b9c02c88d98" }
+    }
+]

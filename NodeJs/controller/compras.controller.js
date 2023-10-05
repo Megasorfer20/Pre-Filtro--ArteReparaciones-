@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import { client, conection } from "../conection/conection.js";
 
 const getCompra = async (req,res) => {
@@ -8,16 +9,28 @@ const getCompra = async (req,res) => {
         client.close();
     } catch (error) {
         console.log(error);
-        throw new Error(`No se puede conectar a la coleccion`)
     }
 };
 
-const postCompra = () => {};
+const postCompra = async (req,res) => {};
 
-const getOneCompra = () => {};
+const getOneCompra = async (req,res) => {
+    try {
+        const {id} = req.params
+        const idCompras = new ObjectId(id)
+        const compraDB = (await conection()).Compras
+        const compras = await compraDB.find({
+            _id: idCompras
+        }).toArray();
+        res.json(compras)
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
-const updateCompra = () => {};
+const updateCompra = async (req,res) => {};
 
-const deleteeCompra = () => {};
+const deleteeCompra = async (req,res) => {};
 
 export { getCompra, postCompra, getOneCompra, updateCompra, deleteeCompra };

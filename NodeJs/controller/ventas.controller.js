@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import { client, conection } from "../conection/conection.js";
 
 const getVenta = async (req,res) => {
@@ -8,16 +9,28 @@ const getVenta = async (req,res) => {
         client.close();
     } catch (error) {
         console.log(error);
-        throw new Error(`No se puede conectar a la coleccion`)
     }
 };
 
-const postVenta = () => {};
+const postVenta = async (req,res) => {};
 
-const getOneVenta = () => {};
+const getOneVenta = async (req,res) => {
+    try {
+        const {id} = req.params
+        const VentasObjectId = new ObjectId(id)
+        const ventasDB = (await conection()).Ventas
+        const ventas = await ventasDB.find({
+            _id: VentasObjectId
+        }).toArray();
+        res.json(ventas)
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
-const updateVenta = () => {};
+const updateVenta = async (req,res) => {};
 
-const deleteeVenta = () => {};
+const deleteeVenta = async (req,res) => {};
 
 export { getVenta, postVenta, getOneVenta, updateVenta, deleteeVenta };

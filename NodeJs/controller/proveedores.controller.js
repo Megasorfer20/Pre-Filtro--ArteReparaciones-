@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import { client, conection } from "../conection/conection.js";
 
 const getProveedor = async (req,res) => {
@@ -8,16 +9,28 @@ const getProveedor = async (req,res) => {
         client.close();
     } catch (error) {
         console.log(error);
-        throw new Error(`No se puede conectar a la coleccion`)
     }
 };
 
-const postProveedor = () => {};
+const postProveedor = async (req,res) => {};
 
-const getOneProveedor = () => {};
+const getOneProveedor = async (req,res) => {
+    try {
+        const {id} = req.params
+        const idProveedor = new ObjectId(id)
+        const proveedoresDB = (await conection()).Proveedores
+        const proveedores = await proveedoresDB.find({
+            _id:idProveedor
+        }).toArray();
+        res.json(proveedores)
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
-const updateProveedor = () => {};
+const updateProveedor = async (req,res) => {};
 
-const deleteeProveedor = () => {};
+const deleteeProveedor = async (req,res) => {};
 
 export { getProveedor, postProveedor, getOneProveedor, updateProveedor, deleteeProveedor };
