@@ -2,10 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Table, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import "./Reparaciones.css";
-import ListadoReparaciones from "./ListaReparaciones";
+import "./Ventas.css";
+import ListadoReparaciones from "./ListaVentas";
 
-export default function Reparaciones({}) {
+export default function Ventas({}) {
   const [productosApiData, setProductosApiData] = useState([]);
   const [empleadosApiData, setEmpleadosApiData] = useState([]);
   const [clientesApiData, setClientesApiData] = useState([]);
@@ -69,7 +69,7 @@ export default function Reparaciones({}) {
         const clienteRelacion = clientesApiData.find(
           (el) => el._id === element.Cliente
         );
-
+        
         return (
           <ListadoReparaciones
             key={element._id}
