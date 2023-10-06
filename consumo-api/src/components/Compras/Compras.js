@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Table, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./Compras.css";
-import ListadoReparaciones from "./ListaCompras";
+import ListadoCompras from "./ListaCompras";
 
 export default function Compras() {
   const [comprasApiData, setcomprasApiData] = useState([]);
@@ -47,7 +47,7 @@ export default function Compras() {
 
   return (
     <React.Fragment>
-      <h1>Informacion de Reparaciones</h1>
+      <h1>Informacion de Compras</h1>
       <Link to="/comprass/add">
         <Button>Nueva Compra</Button>
       </Link>
@@ -66,8 +66,10 @@ export default function Compras() {
           )
         })
 
+        console.log(inventariosRElacion);
+
         return (
-          <ListadoReparaciones
+          <ListadoCompras
             key={element._id}
             data={element}
             empleado={empleadoRelacion}
