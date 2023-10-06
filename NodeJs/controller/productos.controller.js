@@ -11,7 +11,21 @@ const getProducto = async (req, res) => {
     }
 };
 
-const postProducto = async (req, res) => {};
+const postProducto = async (req, res) => {
+    try {
+        const { Producto, Sede, Stock, Precio } = req.body;
+        const productosDB = (await conection()).Productos;
+        const productos = await productosDB.insertOne({
+            Producto,
+            Sede,
+            Stock,
+            Precio,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneProducto = async (req, res) => {
     try {
@@ -29,9 +43,39 @@ const getOneProducto = async (req, res) => {
     }
 };
 
-const updateProducto = async (req, res) => {};
+const updateProducto = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const { Producto, Sede, Stock, Precio } = req.body;
+        const productosDB = (await conection()).Productos;
+        const productos = await productosDB.findOneAndReplace(
+            {
+                _id: productoId,
+            },
+            { Producto, Sede, Stock, Precio }
+        );
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
-const deleteeProducto = async (req, res) => {};
+const deleteeProducto = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Productos;
+        await productosDB.deleteOne(
+            {
+                _id:productoId,
+            }
+        );
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export {
     getProducto,
