@@ -30,9 +30,9 @@ export default function ListadoSedes({ data }) {
         </div>
         {isActive && (
           <div className="accordion-content">
-            <Link to="/inventarios/add">
+            
             <Button>Agegar inventario</Button>
-            </Link>
+          
             <ul>
               <ListadoInventarios idSede={data._id}/>
             {console.log(data._id)}

@@ -30,7 +30,7 @@ export default function Proveedores({}) {
         <React.Fragment>
             <h1>Informacion de proveedores</h1>
             <Link to="/proveedores/add">
-            <Button>Nueva Sede</Button>
+            <Button>Nuevo proveedore</Button>
             </Link>
             {proveedoresApiData.map((element) => {
                 return (
