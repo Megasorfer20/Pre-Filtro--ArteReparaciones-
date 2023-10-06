@@ -5,39 +5,39 @@ import axios from "axios";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
-export default function ListadoReparaciones({ data, cliente, empleado }) {
+export default function ListadoReparaciones({ data, proveedor, empleado,inventarios }) {
   const [isActive, setIsActive] = useState(false);
-  const [FechaIngreso, setFechaIngreso] = useState("");
-  const [FechaDevolucion, setFechaDevolucion] = useState("");
+  const [FechaCompra, setFechaCompra] = useState("");
+  const [FechaEntrega, setFechaEntrega] = useState("");
 
   useEffect(() => {
     const formatDates = () => {
-      let fechaIngresoFormatted = "";
-      let fechaDevolucionFormatted = "";
+      let fechaCompraFormatted = "";
+      let fechaEntregaFormatted = "";
 
-      if (data.FechaIngreso && Date.parse(data.FechaIngreso)) {
-        fechaIngresoFormatted = format(
-          new Date(data.FechaIngreso),
+      if (data.FechaCompra && Date.parse(data.FechaCompra)) {
+        fechaCompraFormatted = format(
+          new Date(data.FechaCompra),
           "dd MMMM 'del' yyyy",
           { locale: es }
         );
       }
 
-      if (data.FechaDevolucion && Date.parse(data.FechaDevolucion)) {
-        fechaDevolucionFormatted = format(
-          new Date(data.FechaDevolucion),
+      if (data.FechaEntrega && Date.parse(data.FechaEntrega)) {
+        fechaEntregaFormatted = format(
+          new Date(data.FechaEntrega),
           "dd MMMM 'del' yyyy",
           { locale: es }
         );
       }
 
-      return { fechaIngresoFormatted, fechaDevolucionFormatted };
+      return { fechaCompraFormatted, fechaEntregaFormatted };
     };
 
-    const { fechaIngresoFormatted, fechaDevolucionFormatted } = formatDates();
+    const { fechaCompraFormatted, fechaEntregaFormatted } = formatDates();
 
-    setFechaIngreso(fechaIngresoFormatted);
-    setFechaDevolucion(fechaDevolucionFormatted);
+    setFechaCompra(fechaCompraFormatted);
+    setFechaEntrega(fechaEntregaFormatted);
   }, [data]);
 
   return (
@@ -52,22 +52,17 @@ export default function ListadoReparaciones({ data, cliente, empleado }) {
                 : "Indefinido"}
             </h3>
             <h3>
-              <strong>Cliente: </strong>
-              {cliente && cliente.Nombre && cliente.Apellido
-                ? `${cliente.Nombre} ${cliente.Apellido}`
+              <strong>Proveedor: </strong>
+              {proveedor && proveedor.Nombre
+                ? `${proveedor.Nombre}`
                 : "Indefinido"}
             </h3>
-
-            {/*
             <h3>
-              <strong>Empleado: </strong>
-              {data.Empleado}
+              <strong>Empresa Proveedor: </strong>
+              {proveedor && proveedor.Empresa
+                ? `${proveedor.Empresa}`
+                : "Indefinido"}
             </h3>
-            <h3>
-              <strong>Cliente: </strong>
-              {data.Cliente}
-            </h3>
-              */}
 
             <h3>
               <strong>Equipo: </strong>
@@ -80,7 +75,7 @@ export default function ListadoReparaciones({ data, cliente, empleado }) {
         </div>
         {isActive && (
           <div className="accordion-content">
-            <Table singleLine>
+            {/*<Table singleLine>
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>Especificaciones</Table.HeaderCell>
@@ -105,18 +100,18 @@ export default function ListadoReparaciones({ data, cliente, empleado }) {
                   </Table.Cell>
                 </Table.Row>
               </Table.Body>
-            </Table>
+                      </Table>*/}
             <p>
               <strong>Reparado: </strong>
               {data.Reparado ? "Reparado" : "Pendiente"}
             </p>
             <p>
-              <strong>Fecha Ingreso: </strong>
-              {FechaIngreso}
+              <strong>Fecha Compra: </strong>
+              {FechaCompra}
             </p>
-            {FechaDevolucion !== "" && (
+            {FechaEntrega !== "" && (
               <p>
-                <strong>Fecha Devolucion: </strong>$ {FechaDevolucion}
+                <strong>Fecha Entrega: </strong>$ {FechaEntrega}
               </p>
             )}
             {data.ValorPagar && (

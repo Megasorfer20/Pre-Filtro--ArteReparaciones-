@@ -5,15 +5,16 @@ import { Link } from "react-router-dom";
 import "./Compras.css";
 import ListadoReparaciones from "./ListaCompras";
 
-export default function Compras({}) {
-  const [productosApiData, setProductosApiData] = useState([]);
+export default function Compras() {
+  const [comprasApiData, setcomprasApiData] = useState([]);
   const [empleadosApiData, setEmpleadosApiData] = useState([]);
-  const [clientesApiData, setClientesApiData] = useState([]);
+  const [proveedoresApiData, setproveedoresApiData] = useState([]);
+  const [InventariosApiData, setInventariosApiData] = useState([]);
 
   useEffect(() => {
     axios.get("http://localhost:5000/reparaciones").then((response) => {
       console.log(response.data);
-      setProductosApiData(response.data);
+      setcomprasApiData(response.data);
     });
 
     axios.get(`http://localhost:5000/empleados`).then((response) => {
@@ -21,61 +22,57 @@ export default function Compras({}) {
       setEmpleadosApiData(response.data);
     });
 
-    axios.get(`http://localhost:5000/clientes`).then((response) => {
+    axios.get(`http://localhost:5000/proveedores`).then((response) => {
       console.log(response.data);
-      setClientesApiData(response.data);
+      setproveedoresApiData(response.data);
+    });
+
+    axios.get(`http://localhost:5000/inventarios`).then((response) => {
+      console.log(response.data);
+      setInventariosApiData(response.data);
     });
   }, []);
 
-  const setProductosData = (data) => {
-    let {
-      _id,
-      TipoEquipo,
-      Especificaciones,
-      Problema,
-      FechaIngreso,
-      FechaDevolucion,
-      ValorPagar,
-      Reparado,
-      Empleado,
-      Cliente,
+  const setComprasData = (data) => {
+    let {_id,FechaCompra,Proveedor,Elementos,Empleado,FechaEntrega,TotalPagar,
     } = data;
-    localStorage.setItem("PRODUCTOID", _id);
-    localStorage.setItem("TIPOEQUIPOREPARACIONES", TipoEquipo);
-    localStorage.setItem(
-      "ESPECIFICACIONESEQUIPOREPARACIONES",
-      Especificaciones
-    );
-    localStorage.setItem("PROBLEMAEQUIPOREPARACIONES", Problema);
-    localStorage.setItem("FECHAINGRESOREPARACIONES", FechaIngreso);
-    localStorage.setItem("FECHADEVOLUCIONREPARACIONES", FechaDevolucion);
-    localStorage.setItem("VALORPAGARREPARACIONES", ValorPagar);
-    localStorage.setItem("REPARADOREPARACIONES", Reparado);
-    localStorage.setItem("EMPLEADOREPARACIONES", Empleado);
-    localStorage.setItem("CLIENTEREPARACIONES", Cliente);
+    localStorage.setItem("COMPRAID", _id);
+    localStorage.setItem("FECHACOMPRA", FechaCompra);
+    localStorage.setItem("PROVEEDORCOMPRA",Proveedor);
+    localStorage.setItem("ELEMENTOSCOMPRA", Elementos);
+    localStorage.setItem("EMPLEADOCOMPRAS", Empleado);
+    localStorage.setItem("FECHAENTREGACOMPRAS", FechaEntrega);
+    localStorage.setItem("TOTALPAGARCOMPRAS", TotalPagar);
   };
 
   return (
     <React.Fragment>
       <h1>Informacion de Reparaciones</h1>
-      <Link to="/reparaciones/add">
-        <Button>Nueva Reparacion</Button>
+      <Link to="/comprass/add">
+        <Button>Nueva Compra</Button>
       </Link>
-      {productosApiData.map((element) => {
+      {comprasApiData.map((element) => {
         const empleadoRelacion = empleadosApiData.find(
           (el) => el._id === element.Empleado
         );
 
-        const clienteRelacion = clientesApiData.find(
-          (el) => el._id === element.Cliente
+        const proveedorRelacion = proveedoresApiData.find(
+          (el) => el._id === element.Proveedor
         );
         
+        const inventariosRElacion = element.Elementos.map(elem => {
+          return InventariosApiData.find(
+            el => el._id === elem.ProductoComprado
+          )
+        })
+
         return (
           <ListadoReparaciones
             key={element._id}
             data={element}
             empleado={empleadoRelacion}
-            cliente={clienteRelacion}
+            proveedor={proveedorRelacion}
+            inventarios={inventariosRElacion}
           />
         );
       })}
