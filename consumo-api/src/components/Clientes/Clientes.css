@@ -55,3 +55,118 @@
       width: 90%;
     }
   }
+
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.form button {
+  margin-right: 10px;
+}
+
+.form .field {
+  margin-bottom: 10px;
+}
+
+.form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.form button[type="button"] {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+}
+
+.form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form input[type="text"],
+.form input[type="date"],
+.form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form .field .dropdown {
+  width: 100%;
+}
+
+.form .field .multiple.selection .label {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.form .field .multiple.selection .options .item {
+  background-color: #f7f7f7;
+  color: #333;
+  border-radius: 5px;
+}
+.form .field .multiple.selection .visible.search.selection .icon {
+  color: #007bff;
+}
+.form .field .multiple.selection .label .delete.icon {
+  color: #fff;
+}
+
+.form .field .multiple.selection .icon {
+  color: #007bff;
+}
