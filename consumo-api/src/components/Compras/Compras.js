@@ -12,7 +12,7 @@ export default function Compras() {
   const [InventariosApiData, setInventariosApiData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/reparaciones").then((response) => {
+    axios.get("http://localhost:5000/compras").then((response) => {
       console.log(response.data);
       setcomprasApiData(response.data);
     });

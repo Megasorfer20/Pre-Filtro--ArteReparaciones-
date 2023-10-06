@@ -64,10 +64,6 @@ export default function ListadoReparaciones({ data, proveedor, empleado,inventar
                 : "Indefinido"}
             </h3>
 
-            <h3>
-              <strong>Equipo: </strong>
-              {data.TipoEquipo}
-            </h3>
             <Button>Actualizar</Button>
             <Button>Eliminar</Button>
           </div>
@@ -75,7 +71,7 @@ export default function ListadoReparaciones({ data, proveedor, empleado,inventar
         </div>
         {isActive && (
           <div className="accordion-content">
-            {/*<Table singleLine>
+            <Table singleLine>
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>Especificaciones</Table.HeaderCell>
@@ -100,7 +96,7 @@ export default function ListadoReparaciones({ data, proveedor, empleado,inventar
                   </Table.Cell>
                 </Table.Row>
               </Table.Body>
-                      </Table>*/}
+                      </Table>
             <p>
               <strong>Reparado: </strong>
               {data.Reparado ? "Reparado" : "Pendiente"}
