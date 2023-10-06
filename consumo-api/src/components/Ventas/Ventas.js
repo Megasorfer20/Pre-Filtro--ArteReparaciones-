@@ -36,20 +36,19 @@ export default function Ventas() {
     const setventasData = (data) => {
         let {
             _id,
-            FechaCompra,
-            Proveedor,
-            Elementos,
+            FechaVenta,
             Empleado,
-            FechaEntrega,
+            Elementos,
+            Cliente,
+
             TotalPagar,
         } = data;
-        localStorage.setItem("COMPRAID", _id);
-        localStorage.setItem("FECHACOMPRA", FechaCompra);
-        localStorage.setItem("PROVEEDORCOMPRA", Proveedor);
-        localStorage.setItem("ELEMENTOSCOMPRA", Elementos);
-        localStorage.setItem("EMPLEADOventas", Empleado);
-        localStorage.setItem("FECHAENTREGAventas", FechaEntrega);
-        localStorage.setItem("TOTALPAGARventas", TotalPagar);
+        localStorage.setItem("VENTASID", _id);
+        localStorage.setItem("FECHAVENTAS", FechaVenta);
+        localStorage.setItem("EMPLEADOVENTAS", Empleado);
+        localStorage.setItem("ELEMENTOSVENTAS", Elementos);
+        localStorage.setItem("CLIENTEVENTAS", Cliente);
+        localStorage.setItem("TOTALPAGARVENTAS", TotalPagar);
     };
 
     return (
@@ -67,13 +66,14 @@ export default function Ventas() {
                     (el) => el._id === element.Cliente
                 );
 
-                const inventariosRElacion = element.Elementos.map((elem) => {
+                const productosRelacion = element.Elementos.map((elem) => {
+                  
                     return InventariosApiData.find(
                         (el) => el._id === elem.ProductoVendido
                     );
                 });
 
-                console.log(inventariosRElacion);
+                console.log(productosRelacion);
 
                 return (
                     <ListadoVentas
@@ -81,7 +81,7 @@ export default function Ventas() {
                         data={element}
                         empleado={empleadoRelacion}
                         proveedor={proveedorRelacion}
-                        inventarios={inventariosRElacion}
+                        inventarios={productosRelacion}
                     />
                 );
             })}

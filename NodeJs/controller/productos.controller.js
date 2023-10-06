@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import { client, conection } from "../conection/conection.js";
 
 const getProducto = async (req, res) => {
