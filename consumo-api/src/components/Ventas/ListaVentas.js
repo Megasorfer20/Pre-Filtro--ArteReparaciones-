@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button } from "semantic-ui-react";
-import { Link } from "react-router-dom";
-import axios from "axios";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
@@ -12,37 +10,26 @@ export default function ListadoVentas({
     inventarios,
 }) {
     const [isActive, setIsActive] = useState(false);
-    const [FechaCompra, setFechaCompra] = useState("");
-    const [FechaEntrega, setFechaEntrega] = useState("");
+    const [FechaVenta, setFechaVenta] = useState("");
 
     useEffect(() => {
         const formatDates = () => {
-            let fechaCompraFormatted = "";
-            let fechaEntregaFormatted = "";
+            let fechaVentaFormatted = "";
 
-            if (data.FechaCompra && Date.parse(data.FechaCompra)) {
-                fechaCompraFormatted = format(
-                    new Date(data.FechaCompra),
+            if (data.FechaVenta && Date.parse(data.FechaVenta)) {
+                fechaVentaFormatted = format(
+                    new Date(data.FechaVenta),
                     "dd MMMM 'del' yyyy",
                     { locale: es }
                 );
             }
 
-            if (data.FechaEntrega && Date.parse(data.FechaEntrega)) {
-                fechaEntregaFormatted = format(
-                    new Date(data.FechaEntrega),
-                    "dd MMMM 'del' yyyy",
-                    { locale: es }
-                );
-            }
-
-            return { fechaCompraFormatted, fechaEntregaFormatted };
+            return { fechaVentaFormatted };
         };
 
-        const { fechaCompraFormatted, fechaEntregaFormatted } = formatDates();
+        const { fechaVentaFormatted } = formatDates();
 
-        setFechaCompra(fechaCompraFormatted);
-        setFechaEntrega(fechaEntregaFormatted);
+        setFechaVenta(fechaVentaFormatted);
     }, [data]);
 
     return (
@@ -60,18 +47,11 @@ export default function ListadoVentas({
                                 : "Indefinido"}
                         </h3>
                         <h3>
-                            <strong>Proveedor: </strong>
-                            {proveedor && proveedor.Nombre
-                                ? `${proveedor.Nombre}`
+                            <strong>Cliente: </strong>
+                            {proveedor && proveedor.Nombre && proveedor.Apellido
+                                ? `${proveedor.Nombre} ${proveedor.Apellido}`
                                 : "Indefinido"}
                         </h3>
-                        <h3>
-                            <strong>Empresa Proveedor: </strong>
-                            {proveedor && proveedor.Empresa
-                                ? `${proveedor.Empresa}`
-                                : "Indefinido"}
-                        </h3>
-
                         <Button>Actualizar</Button>
                         <Button>Eliminar</Button>
                     </div>
@@ -83,7 +63,7 @@ export default function ListadoVentas({
                             <Table.Header>
                                 <Table.Row>
                                     <Table.HeaderCell>
-                                        Productos Comprados
+                                        Productos Vendidos
                                     </Table.HeaderCell>
                                 </Table.Row>
                             </Table.Header>
@@ -109,7 +89,7 @@ export default function ListadoVentas({
                                                     {data.Elementos.map(
                                                         (el) => {
                                                             if (
-                                                                el.ProductoComprado ===
+                                                                el.ProductoVendido ===
                                                                 element._id
                                                             ) {
                                                                 return (
@@ -117,7 +97,9 @@ export default function ListadoVentas({
                                                                         <strong>
                                                                             Cantidad:{" "}
                                                                         </strong>
-                                                                        {el.Cantidad}
+                                                                        {
+                                                                            el.Cantidad
+                                                                        }
                                                                     </p>
                                                                 );
                                                             }
@@ -131,14 +113,10 @@ export default function ListadoVentas({
                             </Table.Body>
                         </Table>
                         <p>
-                            <strong>Fecha Compra: </strong>
-                            {FechaCompra}
+                            <strong>Fecha Venta: </strong>
+                            {FechaVenta}
                         </p>
-                        {FechaEntrega !== "" && (
-                            <p>
-                                <strong>Fecha Entrega: </strong>{FechaEntrega}
-                            </p>
-                        )}
+
                         {data.TotalPagar && (
                             <p>
                                 <strong>Dinero Recibido: </strong>${" "}
