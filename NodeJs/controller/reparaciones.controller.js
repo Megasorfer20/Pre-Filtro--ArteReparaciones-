@@ -6,7 +6,6 @@ const getReparacion = async (req, res) => {
         const reparecionesDB = (await conection()).Reparaciones;
         const repareciones = await reparecionesDB.find({}).toArray();
         res.json(repareciones);
-        client.close();
     } catch (error) {
         console.log(error);
     }
@@ -25,7 +24,6 @@ const getOneReparacion = async (req, res) => {
             })
             .toArray();
         res.json(repareciones);
-        client.close();
     } catch (error) {
         console.log(error);
     }
@@ -36,28 +34,28 @@ const getEspecificacionesReparacion = async (req, res) => {
         const { id } = req.params;
         const idReparacion = new ObjectId(id);
         const reparecionesDB = (await conection()).Reparaciones;
-        const repareciones = await reparecionesDB.aggregate([
-            {$match:{_id : idReparacion}},
-            {$unwind: "$Especificaciones"},
-            {
-                $group: {
-                    _id: null,
-                    Especificaciones: { $push: "$Especificaciones" }
-                }
-            },
-            {
-                $project: {
-                    _id: 0,
-                    Especificaciones: 1
-                }
-            } 
-        ])
+        const repareciones = await reparecionesDB
+            .aggregate([
+                { $match: { _id: idReparacion } },
+                { $unwind: "$Especificaciones" },
+                {
+                    $group: {
+                        _id: null,
+                        Especificaciones: { $push: "$Especificaciones" },
+                    },
+                },
+                {
+                    $project: {
+                        _id: 0,
+                        Especificaciones: 1,
+                    },
+                },
+            ])
             .toArray();
 
-            const especificacionesArray = repareciones[0].Especificaciones
+        const especificacionesArray = repareciones[0].Especificaciones;
 
         res.json(especificacionesArray);
-        client.close();
     } catch (error) {
         console.log(error);
     }
@@ -68,28 +66,28 @@ const getProblemasReparacion = async (req, res) => {
         const { id } = req.params;
         const idReparacion = new ObjectId(id);
         const reparecionesDB = (await conection()).Reparaciones;
-        const repareciones = await reparecionesDB.aggregate([
-            {$match:{_id : idReparacion}},
-            {$unwind: "$Problema"},
-            {
-                $group: {
-                    _id: null,
-                    Problema: { $push: "$Problema" }
-                }
-            },
-            {
-                $project: {
-                    _id: 0,
-                    Problema: 1
-                }
-            } 
-        ])
+        const repareciones = await reparecionesDB
+            .aggregate([
+                { $match: { _id: idReparacion } },
+                { $unwind: "$Problema" },
+                {
+                    $group: {
+                        _id: null,
+                        Problema: { $push: "$Problema" },
+                    },
+                },
+                {
+                    $project: {
+                        _id: 0,
+                        Problema: 1,
+                    },
+                },
+            ])
             .toArray();
 
-            const problemasArray = repareciones[0].Problema
+        const problemasArray = repareciones[0].Problema;
 
         res.json(problemasArray);
-        client.close();
     } catch (error) {
         console.log(error);
     }
@@ -106,6 +104,5 @@ export {
     updateReparacion,
     deleteeReparacion,
     getEspecificacionesReparacion,
-    getProblemasReparacion
+    getProblemasReparacion,
 };
-

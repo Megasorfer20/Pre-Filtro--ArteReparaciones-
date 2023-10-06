@@ -5,7 +5,6 @@ const getProducto = async (req, res) => {
         const productosDB = (await conection()).Productos;
         const productos = await productosDB.find({}).toArray();
         res.json(productos);
-        client.close();
     } catch (error) {
         console.log(error);
     }
@@ -24,7 +23,6 @@ const getOneProducto = async (req, res) => {
             })
             .toArray();
         res.json(productos);
-        client.close();
     } catch (error) {
         console.log(error);
     }
