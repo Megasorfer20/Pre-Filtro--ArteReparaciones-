@@ -40,7 +40,6 @@ export default function Ventas() {
             Empleado,
             Elementos,
             Cliente,
-
             TotalPagar,
         } = data;
         localStorage.setItem("VENTASID", _id);
