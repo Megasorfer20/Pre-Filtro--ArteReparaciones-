@@ -11,7 +11,21 @@ const getInventario = async (req, res) => {
     }
 };
 
-const postInventario = async (req, res) => {};
+const postInventario = async (req, res) => {
+    try {
+        const { Producto, Precio, Stock, Proveedor } = req.body;
+        const productosDB = (await conection()).Inventarios;
+        await productosDB.insertOne({
+            Producto,
+            Precio,
+            Stock,
+            Proveedor,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneInventario = async (req, res) => {
     try {
@@ -47,7 +61,19 @@ const getInventarioByProveedor = async (req, res) => {
 
 const updateInventario = async (req, res) => {};
 
-const deleteeInventario = async (req, res) => {};
+const deleteeInventario = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Inventarios;
+        await productosDB.deleteOne({
+            _id: productoId,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export {
     getInventario,

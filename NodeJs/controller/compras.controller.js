@@ -11,7 +11,30 @@ const getCompra = async (req, res) => {
     }
 };
 
-const postCompra = async (req, res) => {};
+const postCompra = async (req, res) => {
+    try {
+        const {
+            FechaCompra,
+            Proveedor,
+            Elementos,
+            Empleado,
+            FechaEntrega,
+            TotalPagar,
+        } = req.body;
+        const productosDB = (await conection()).Compras;
+        await productosDB.insertOne({
+            FechaCompra,
+            Proveedor,
+            Elementos,
+            Empleado,
+            FechaEntrega,
+            TotalPagar,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneCompra = async (req, res) => {
     try {
@@ -31,6 +54,18 @@ const getOneCompra = async (req, res) => {
 
 const updateCompra = async (req, res) => {};
 
-const deleteeCompra = async (req, res) => {};
+const deleteeCompra = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Compras;
+        await productosDB.deleteOne({
+            _id: productoId,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export { getCompra, postCompra, getOneCompra, updateCompra, deleteeCompra };

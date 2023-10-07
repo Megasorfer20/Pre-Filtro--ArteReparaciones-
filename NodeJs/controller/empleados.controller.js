@@ -11,7 +11,25 @@ const getEmpleado = async (req, res) => {
     }
 };
 
-const postEmpleado = async (req, res) => {};
+const postEmpleado = async (req, res) => {
+    try {
+        const { Nombre, Apellido, Direccion, DNI, Telefono, Sede, Cargo } =
+            req.body;
+        const productosDB = (await conection()).Empleados;
+        await productosDB.insertOne({
+            Nombre,
+            Apellido,
+            Direccion,
+            DNI,
+            Telefono,
+            Sede,
+            Cargo,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneEmpleado = async (req, res) => {
     try {
@@ -48,7 +66,19 @@ const getEmpleadoBySede = async (req, res) => {
 
 const updateEmpleado = async (req, res) => {};
 
-const deleteeEmpleado = async (req, res) => {};
+const deleteeEmpleado = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Empleados;
+        await productosDB.deleteOne({
+            _id: productoId,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export {
     getEmpleado,

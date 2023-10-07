@@ -11,7 +11,34 @@ const getReparacion = async (req, res) => {
     }
 };
 
-const postReparacion = async (req, res) => {};
+const postReparacion = async (req, res) => {
+    try {
+        const { TipoEquipo,
+            Especificaciones,
+            Problema,
+            FechaIngreso,
+            FechaDevolucion,
+            ValorPagar,
+            Reparado,
+            Empleado,
+            Cliente, } = req.body;
+        const productosDB = (await conection()).Reparaciones;
+        await productosDB.insertOne({
+            TipoEquipo,
+            Especificaciones,
+            Problema,
+            FechaIngreso,
+            FechaDevolucion,
+            ValorPagar,
+            Reparado,
+            Empleado,
+            Cliente,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneReparacion = async (req, res) => {
     try {
@@ -95,7 +122,19 @@ const getProblemasReparacion = async (req, res) => {
 
 const updateReparacion = async (req, res) => {};
 
-const deleteeReparacion = async (req, res) => {};
+const deleteeReparacion = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Reparaciones;
+        await productosDB.deleteOne({
+            _id: productoId,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export {
     getReparacion,

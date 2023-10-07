@@ -15,7 +15,7 @@ const postProducto = async (req, res) => {
     try {
         const { Producto, Sede, Stock, Precio } = req.body;
         const productosDB = (await conection()).Productos;
-        const productos = await productosDB.insertOne({
+        await productosDB.insertOne({
             Producto,
             Sede,
             Stock,

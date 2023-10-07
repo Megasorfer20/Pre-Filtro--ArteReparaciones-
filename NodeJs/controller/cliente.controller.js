@@ -11,7 +11,22 @@ const getCliente = async (req, res) => {
     }
 };
 
-const postCliente = async (req, res) => {};
+const postCliente = async (req, res) => {
+    try {
+        const { Nombre, Apellido, Direccion, Telefono, Email } = req.body;
+        const productosDB = (await conection()).Clientes;
+        await productosDB.insertOne({
+            Nombre,
+            Apellido,
+            Direccion,
+            Telefono,
+            Email,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneCliente = async (req, res) => {
     try {
@@ -31,7 +46,19 @@ const getOneCliente = async (req, res) => {
 
 const updateCliente = async (req, res) => {};
 
-const deleteeCliente = async (req, res) => {};
+const deleteeCliente = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Clientes;
+        await productosDB.deleteOne({
+            _id: productoId,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export {
     getCliente,

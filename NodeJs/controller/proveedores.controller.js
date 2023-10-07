@@ -11,7 +11,22 @@ const getProveedor = async (req, res) => {
     }
 };
 
-const postProveedor = async (req, res) => {};
+const postProveedor = async (req, res) => {
+    try {
+        const { Nombre, Empresa, Direccion, Telefono, Email } = req.body;
+        const productosDB = (await conection()).Proveedores;
+        await productosDB.insertOne({
+            Nombre,
+            Empresa,
+            Direccion,
+            Telefono,
+            Email,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneProveedor = async (req, res) => {
     try {
@@ -31,7 +46,19 @@ const getOneProveedor = async (req, res) => {
 
 const updateProveedor = async (req, res) => {};
 
-const deleteeProveedor = async (req, res) => {};
+const deleteeProveedor = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Proveedores;
+        await productosDB.deleteOne({
+            _id: productoId,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export {
     getProveedor,

@@ -11,7 +11,26 @@ const getVenta = async (req, res) => {
     }
 };
 
-const postVenta = async (req, res) => {};
+const postVenta = async (req, res) => {
+    try {
+        const { FechaVenta,
+            Empleado,
+            Elementos,
+            Cliente,
+            TotalPagar, } = req.body;
+        const productosDB = (await conection()).Ventas;
+        await productosDB.insertOne({
+            FechaVenta,
+            Empleado,
+            Elementos,
+            Cliente,
+            TotalPagar,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 const getOneVenta = async (req, res) => {
     try {
@@ -31,6 +50,18 @@ const getOneVenta = async (req, res) => {
 
 const updateVenta = async (req, res) => {};
 
-const deleteeVenta = async (req, res) => {};
+const deleteeVenta = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productoId = new ObjectId(id);
+        const productosDB = (await conection()).Ventas;
+        await productosDB.deleteOne({
+            _id: productoId,
+        });
+        client.close();
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export { getVenta, postVenta, getOneVenta, updateVenta, deleteeVenta };
