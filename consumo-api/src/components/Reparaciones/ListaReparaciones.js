@@ -10,6 +10,21 @@ export default function ListadoReparaciones({ data, cliente, empleado }) {
   const [FechaIngreso, setFechaIngreso] = useState("");
   const [FechaDevolucion, setFechaDevolucion] = useState("");
 
+  const handleDelete = () => {
+    console.log(data._id);
+    axios
+      .delete(`http://localhost:5000/reparaciones/${data._id}`)
+      .then(() => {
+        console.log("Producto eliminado correctamente");
+        window.location.reload(true);
+      })
+      .catch((error) => {
+        console.error("Error al eliminar el producto:", error);
+      });
+
+      window.location.reload(true)
+  };
+
   useEffect(() => {
     const formatDates = () => {
       let fechaIngresoFormatted = "";
@@ -74,7 +89,7 @@ export default function ListadoReparaciones({ data, cliente, empleado }) {
               {data.TipoEquipo}
             </h3>
             <Button>Actualizar</Button>
-            <Button>Eliminar</Button>
+            <Button onClick={handleDelete}>Eliminar</Button>
           </div>
           <div>{isActive ? "-" : "+"}</div>
         </div>
@@ -116,7 +131,7 @@ export default function ListadoReparaciones({ data, cliente, empleado }) {
             </p>
             {FechaDevolucion !== "" && (
               <p>
-                <strong>Fecha Devolucion: </strong>$ {FechaDevolucion}
+                <strong>Fecha Devolucion: </strong>{FechaDevolucion}
               </p>
             )}
             {data.ValorPagar && (

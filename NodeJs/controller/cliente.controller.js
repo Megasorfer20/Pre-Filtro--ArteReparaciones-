@@ -14,12 +14,13 @@ const getCliente = async (req, res) => {
 const postCliente = async (req, res) => {
     try {
         const { Nombre, Apellido, Direccion, Telefono, Email } = req.body;
+        const telParsed = Number(Telefono)
         const productosDB = (await conection()).Clientes;
         await productosDB.insertOne({
             Nombre,
             Apellido,
             Direccion,
-            Telefono,
+            Telefono: telParsed,
             Email,
         });
         client.close();

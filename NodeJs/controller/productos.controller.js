@@ -14,12 +14,16 @@ const getProducto = async (req, res) => {
 const postProducto = async (req, res) => {
     try {
         const { Producto, Sede, Stock, Precio } = req.body;
+        
+        const stockParsed = Number(Stock)
+        const precioParsed = Number(Precio)
+
         const productosDB = (await conection()).Productos;
         await productosDB.insertOne({
             Producto,
             Sede,
-            Stock,
-            Precio,
+            Stock: stockParsed,
+            Precio: precioParsed,
         });
         client.close();
     } catch (error) {

@@ -113,7 +113,7 @@ export default function Clientes() {
                   <Form.Field>
                       <label>Teléfono</label>
                       <Input
-                          type="tel"
+                          type="number"
                           placeholder="Teléfono"
                           value={formData.Telefono}
                           onChange={(e) =>

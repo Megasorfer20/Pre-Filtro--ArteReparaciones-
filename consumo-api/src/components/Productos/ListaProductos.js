@@ -7,7 +7,7 @@ export default function ListadoProductos({ data }) {
     const [isActive, setIsActive] = useState(false);
 
 
-    const handleDeleteProduct = () => {
+    const handleDelete = () => {
       console.log(data._id);
       axios
         .delete(`http://localhost:5000/productos/${data._id}`)
@@ -31,7 +31,7 @@ export default function ListadoProductos({ data }) {
             <Link to="/productos/update">
             <Button>Actualizar</Button>
             </Link>
-            <Button onClick={handleDeleteProduct}>Eliminar</Button>
+            <Button onClick={handleDelete}>Eliminar</Button>
           </div>
           <div>{isActive ? "-" : "+"}</div>
         </div>

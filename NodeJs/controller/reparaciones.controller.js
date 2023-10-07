@@ -22,17 +22,24 @@ const postReparacion = async (req, res) => {
             Reparado,
             Empleado,
             Cliente, } = req.body;
+
+            const FechaIngresoParsed = new Date(FechaIngreso)
+            const FechaDevolucionParsed = new Date(FechaDevolucion)
+
+const EmpleadoParssed = new ObjectId(Empleado)
+            const ClienteParssed = new ObjectId(Cliente)
+
         const productosDB = (await conection()).Reparaciones;
         await productosDB.insertOne({
             TipoEquipo,
             Especificaciones,
             Problema,
-            FechaIngreso,
-            FechaDevolucion,
+            FechaIngreso: FechaIngresoParsed,
+            FechaDevolucion: FechaDevolucionParsed,
             ValorPagar,
             Reparado,
-            Empleado,
-            Cliente,
+            Empleado: EmpleadoParssed,
+            Cliente:ClienteParssed ,
         });
         client.close();
     } catch (error) {
