@@ -20,11 +20,11 @@ const postVenta = async (req, res) => {
             TotalPagar, } = req.body;
         const productosDB = (await conection()).Ventas;
         await productosDB.insertOne({
-            FechaVenta,
-            Empleado,
+            FechaVenta: new Date(FechaVenta),
+            Empleado: new ObjectId(Empleado),
             Elementos,
-            Cliente,
-            TotalPagar,
+            Cliente: new ObjectId(Cliente),
+            TotalPagar: Number(TotalPagar),
         });
         client.close();
     } catch (error) {

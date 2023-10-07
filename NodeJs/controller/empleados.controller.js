@@ -20,9 +20,9 @@ const postEmpleado = async (req, res) => {
             Nombre,
             Apellido,
             Direccion,
-            DNI,
-            Telefono,
-            Sede,
+            DNI : Number(DNI),
+            Telefono: Number(Telefono),
+            Sede: new ObjectId(Sede),
             Cargo,
         });
         client.close();

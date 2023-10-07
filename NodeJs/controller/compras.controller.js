@@ -21,14 +21,21 @@ const postCompra = async (req, res) => {
             FechaEntrega,
             TotalPagar,
         } = req.body;
+
+        const FechaCompraPaeser = new Date(FechaCompra)
+        const FechaEntregaParser = new Date(FechaEntrega)
+
+        const ProveedorParser  = new ObjectId(Proveedor)
+        const EmpleadoParser = new ObjectId( Empleado)
+
         const productosDB = (await conection()).Compras;
         await productosDB.insertOne({
-            FechaCompra,
-            Proveedor,
+            FechaCompra: FechaCompraPaeser,
+            Proveedor: ProveedorParser,
             Elementos,
-            Empleado,
-            FechaEntrega,
-            TotalPagar,
+            Empleado: EmpleadoParser,
+            FechaEntrega: FechaEntregaParser,
+            TotalPagar: Number(TotalPagar),
         });
         client.close();
     } catch (error) {

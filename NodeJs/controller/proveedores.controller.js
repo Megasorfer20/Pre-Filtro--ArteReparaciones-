@@ -17,9 +17,9 @@ const postProveedor = async (req, res) => {
         const productosDB = (await conection()).Proveedores;
         await productosDB.insertOne({
             Nombre,
-            Empresa,
+            Empresa: new ObjectId(Empresa),
             Direccion,
-            Telefono,
+            Telefono: Number(Telefono),
             Email,
         });
         client.close();

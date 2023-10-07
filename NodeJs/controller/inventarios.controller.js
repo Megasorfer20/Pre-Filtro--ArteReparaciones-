@@ -17,9 +17,9 @@ const postInventario = async (req, res) => {
         const productosDB = (await conection()).Inventarios;
         await productosDB.insertOne({
             Producto,
-            Precio,
-            Stock,
-            Proveedor,
+            Precio: Number(Precio),
+            Stock: Number(Stock),
+            Proveedor: new ObjectId(Proveedor),
         });
         client.close();
     } catch (error) {
