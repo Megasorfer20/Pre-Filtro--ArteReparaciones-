@@ -14,40 +14,27 @@ Maquetación del frontend básico de la página en modo SPA
 
 https://www.figma.com/file/2xDPMoCoqIEbaIpzshljYS/Untitled?type=design&node-id=1%3A6&mode=design&t=K8O4rIS3d3AxlzES-1
 
-_Secciones de Muestra de información_
-
 ![image](https://github.com/Megasorfer20/Pre-Filtro--ArteReparaciones-/assets/123566003/a8f32fc8-8f0d-44f1-b518-8b3b00270d72)
 ![image](https://github.com/Megasorfer20/Pre-Filtro--ArteReparaciones-/assets/123566003/cfd3419f-1a60-4768-a99b-ca035fa88adc)
 
-_Formularios_
-
-
-## Planeacion
-
-Estructura Inicial de la base de datos (Puede tener ligeroa datos durante el proceso)
 ## Organizacion de las carpetas
 ### consumo-api
 
 Es la carpeta de CRA sin buidear donde se van a consumir todos los APIs y contiene tamvien la UI/UX
+
+En la Dirección ```src/conponents``` se van a encontrar las carpetas con cada ´seccion del header (Faltó hacer los componentes de PATCH, y algunos formularios POST)
+
+Para ejecutar el proyecto de react primero ejecuta el comando ```npm install``` o ```npm i```en de terminal estando dentro de la carpeta, luego de ello ejecuta ```npm start``` y espera, depués de unos minuto se abrirá el proyecto
 
 ### ElementosBaseDatos
 
 Es el modelo principal e inicial de la base de datos, los datos pueden variar a la hora de ejecutar ya que la base 
 
-### NodeJs
-
-Es todo el Backend relacionado a la creacion de las APIs (Proximamente maquetado con Swagger los endpoints)
-
-## Organizacion de las carpetas
-
-### consumo-api
-
-Es la carpeta de CRA sin buidear donde se van a consumir todos los APIs y contiene tamvien la UI/UX
-
-### ElementosBaseDatos
-
-Es el modelo principal e inicial de la base de datos, los datos pueden variar a la hora de ejecutar ya que la base de datos no es la versión final de esta
+Se intenta mantener la base de datos lo más actualizada posible, pero sus datos pueden ir variando, es recomendable mirar directamente sus elementos en ``Mongodb Atlas``
 
 ### NodeJs
 
-Es todo el Backend relacionado a la creacion de las APIs
+Es todo el Backend relacionado a la creacion de las APIs (Proximamente documentado con Swagger los endpoints)
+
+Para ejecutar el servidor de localhost primero ejecuta el comando ```npm install``` o ```npm i```en de terminal estando dentro de la carpeta, luego de ello ejecuta ```npm start``` y espera hasta que en la terminal se mencione que se conectó a un puerto.
+
