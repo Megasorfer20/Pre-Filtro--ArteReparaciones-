@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Table, Button } from "semantic-ui-react";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
+import axios from "axios";
 
 export default function ListadoVentas({
     data,
@@ -11,6 +12,21 @@ export default function ListadoVentas({
 }) {
     const [isActive, setIsActive] = useState(false);
     const [FechaVenta, setFechaVenta] = useState("");
+
+    const handleDelete = () => {
+        console.log(data._id);
+        axios
+          .delete(`http://localhost:5000/ventas/${data._id}`)
+          .then(() => {
+            console.log("Producto eliminado correctamente");
+            window.location.reload(true);
+          })
+          .catch((error) => {
+            console.error("Error al eliminar el producto:", error);
+          });
+  
+          window.location.reload(true)
+      };
 
     useEffect(() => {
         const formatDates = () => {
@@ -53,7 +69,7 @@ export default function ListadoVentas({
                                 : "Indefinido"}
                         </h3>
                         <Button>Actualizar</Button>
-                        <Button>Eliminar</Button>
+                        <Button onClick={handleDelete}>Eliminar</Button>
                     </div>
                     <div>{isActive ? "-" : "+"}</div>
                 </div>
@@ -123,9 +139,6 @@ export default function ListadoVentas({
                                 {data.TotalPagar}
                             </p>
                         )}
-                        <p>
-                            <strong></strong>
-                        </p>
                     </div>
                 )}
             </div>

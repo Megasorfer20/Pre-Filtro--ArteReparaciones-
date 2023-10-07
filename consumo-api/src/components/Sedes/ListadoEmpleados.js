@@ -15,6 +15,21 @@ export default function ListadoEmpleados({ idSede }) {
             });
     }, []);
 
+    const handleDelete = (id) => {
+        axios
+          .delete(`http://localhost:5000/clientes/${id}`)
+          .then(() => {
+            console.log("Producto eliminado correctamente");
+            window.location.reload(true);
+          })
+          .catch((error) => {
+            console.error("Error al eliminar el producto:", error);
+          });
+  
+          window.location.reload(true)
+      };
+
+
     const setEmpleadosData = (data) => {
         let { _id, Nombre, Apellido, DNI, Telefono, Direccion, Sede, Cargo } =
             data;
@@ -48,7 +63,7 @@ export default function ListadoEmpleados({ idSede }) {
                         <Link to="/empleados/update">
                             <Button>Actualizar</Button>
                         </Link>
-                        <Button>Eliminar</Button>
+                        <Button onClick={()=>handleDelete(element._id)}>Eliminar</Button>
                     </li>
                 );
             })}

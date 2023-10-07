@@ -6,6 +6,20 @@ import { Link } from "react-router-dom";
 export default function ListadoInventarios({ idSede }) {
   const [empleadosApiData, setEmpleadosApiData] = useState([]);
 
+  const handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:5000/clientes/${id}`)
+      .then(() => {
+        console.log("Producto eliminado correctamente");
+        window.location.reload(true);
+      })
+      .catch((error) => {
+        console.error("Error al eliminar el producto:", error);
+      });
+
+      window.location.reload(true)
+  };
+
   useEffect(() => {
     axios
       .get(`http://localhost:5000/inventarios/idProveedor/${idSede}`)
@@ -40,7 +54,7 @@ export default function ListadoInventarios({ idSede }) {
             <Link to="/inventarios/update">
               <Button>Actualizar</Button>
             </Link>
-            <Button>Eliminar</Button>
+            <Button onClick={()=> handleDelete(element._id)}>Eliminar</Button>
           </li>
         );
       })}

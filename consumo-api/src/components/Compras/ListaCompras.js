@@ -15,6 +15,22 @@ export default function ListadoCompras({
     const [FechaCompra, setFechaCompra] = useState("");
     const [FechaEntrega, setFechaEntrega] = useState("");
 
+    const handleDelete = () => {
+        console.log(data._id);
+        axios
+          .delete(`http://localhost:5000/compras/${data._id}`)
+          .then(() => {
+            console.log("Producto eliminado correctamente");
+            window.location.reload(true);
+          })
+          .catch((error) => {
+            console.error("Error al eliminar el producto:", error);
+          });
+  
+          window.location.reload(true)
+      };
+
+
     useEffect(() => {
         const formatDates = () => {
             let fechaCompraFormatted = "";
@@ -73,7 +89,7 @@ export default function ListadoCompras({
                         </h3>
 
                         <Button>Actualizar</Button>
-                        <Button>Eliminar</Button>
+                        <Button onClick={handleDelete}>Eliminar</Button>
                     </div>
                     <div>{isActive ? "-" : "+"}</div>
                 </div>

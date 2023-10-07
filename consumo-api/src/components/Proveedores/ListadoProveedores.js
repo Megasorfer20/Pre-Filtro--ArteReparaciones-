@@ -2,9 +2,25 @@ import React, {useState} from "react";
 import ListadoInventarios from "./ListadoInventarios";
 import { Table, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function ListadoSedes({ data }) {
     const [isActive, setIsActive] = useState(false);
+
+    const handleDelete = () => {
+      console.log(data._id);
+      axios
+        .delete(`http://localhost:5000/clientes/${data._id}`)
+        .then(() => {
+          console.log("Producto eliminado correctamente");
+          window.location.reload(true);
+        })
+        .catch((error) => {
+          console.error("Error al eliminar el producto:", error);
+        });
+
+        window.location.reload(true)
+    };
 
   return (
     <div className="accordion">
